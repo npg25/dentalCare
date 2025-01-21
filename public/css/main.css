@@ -1,0 +1,100 @@
+.start-background {
+  background-color: #f8eded;
+}
+
+.page-title {
+  padding: 50px 0 30px 0;
+  text-align: center;
+  position: relative;
+}
+
+.page-title .breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.page-title .breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.page-title .breadcrumbs ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.custom-navbar {
+  background: linear-gradient(to right, #ba0c06, #6B0200);
+  color: white; 
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  position: relative; /* Ensure it's part of the stacking context */
+  z-index: 10; /* Ensure it appears above other content */
+}
+.custom-footer {
+    background: linear-gradient(to right, #ba0c06, #6B0200);
+  }
+
+  .home {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 50%, color-mix(in srgb, var(--accent-color), transparent 98%) 25%, transparent 50%);
+   /* background-color: #6c0200 */
+}
+.container_content {
+position: relative; /* Untuk mengatur posisi relatif elemen induk */
+display: flex; /* Aktifkan flexbox */
+flex-direction: column; /* Arahkan elemen ke kolom */
+align-items: center; /* Pusatkan secara horizontal */
+justify-content: center; /* Pusatkan secara vertikal */
+padding: 30px;
+margin-top: 20px;
+border-radius: 10px;
+box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+background-color: rgba(255, 255, 255, 0.8); /* Tambahkan latar semi-transparan untuk konten */
+z-index: 1; /* Pastikan konten berada di atas */
+font-family: Lato, sans-serif;
+font-style: italic;
+color: black;
+}
+
+.container_content::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border-radius: 10px; /* Sama dengan elemen utama */
+   /* background-image: url('{{ asset('assets/bg3.jpg') }}'); */
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   filter: blur(1px); /* Mengatur tingkat blur */
+   z-index: -1; /* Menempatkan pseudo-element di belakang */
+}
+
+.content {
+   display: flex;
+   flex-direction: row; /* Atur kolom dan baris sesuai layout */
+   align-items: center; /* Pusatkan secara vertikal */
+   justify-content: center; /* Pusatkan secara horizontal */
+}
+
+.left-content {
+   width: 60%;
+   padding-right: 30px;
+}
+
+.right-content {
+   width: 40%;
+   display: flex;
+   align-items: center; /* Pusatkan gambar secara vertikal */
+   justify-content: center; /* Pusatkan gambar secara horizontal */
+}
+  
