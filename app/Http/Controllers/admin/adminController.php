@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\admin;
-// use App\Models\PriceModel;
-// use App\Models\JournalModel;
+use App\Models\PriceModel;
+use App\Models\JournalModel;
 use Illuminate\Http\Request;
 
 
@@ -16,7 +16,10 @@ class adminController extends Controller
         if (!auth()){
             return abort('404');    
         }else {
-        return view('admin.index');
+        $totalPrice = PriceModel::count();
+        $totalJournal = JournalModel::count();
+
+        return view('admin.index', compact('totalPrice', 'totalJournal'));
 
         }
 
