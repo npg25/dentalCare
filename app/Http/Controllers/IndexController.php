@@ -8,14 +8,14 @@ use App\Models\PriceModel;
 
 // use Illuminate\Http\Request;
 
-class IndexV2Controller extends Controller
+class IndexController extends Controller
 {
-    public function IndexV2(){
+    public function Index(){
         $treatments = PriceModel::take(4)->get();
 
         $testimonials = JournalModel::take(4)->get();
 
-        return view('IndexV2', compact('treatments', 'testimonials'));
+        return view('Index', compact('treatments', 'testimonials'));
     }
     
 

@@ -49,7 +49,7 @@ Route::get('catalog/', [App\Http\Controllers\CatalogController::class, 'CatalogI
 
 
 // V2
-Route::get('/', [App\Http\Controllers\Indexv2Controller::class, 'indexV2'])->name('index.V2');
+Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('index.V2');
 
 
 
